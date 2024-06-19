@@ -8,26 +8,11 @@ The input file in the .ts format is converted to two DataFrames using the Save_s
 
 
 ## Deriving connectivity relations
-### Boundary relations
-The TopoRela_boundary.ipynb program is used to extract the boundary relations for a mesh.
+The TopoRela_boundary.ipynb, TopoRela_coboundary.ipynb, and TopoRela_adjacent.ipynb programs extract boundary, coboundary, and adjacent relations for a mesh, respectively.
 * Inputs:
   - the DataFrame $DF_T$
 * Outputs:
-  - a .parquet file in Spark, which is used to store the derived DataFrame corresponding to the desired boundary relation.
- 
-### Coboundary relations
-The TopoRela_coboundary.ipynb program is used to extract the coboundary relations for a mesh.
-* Inputs:
-  - the DataFrame $DF_T$
-* Outputs:
-  - a .parquet file in Spark, storing the extracted DataFrame corresponding to the desired coboundary relation.
-
-### Adjacent relations
-The TopoRela_adjacent.ipynb program is used to extract the adjacent relations for a mesh.
-* Inputs:
-  - the DataFrame $DF_T$
-* Outputs:
-  - a .parquet file in Spark, storing the extracted DataFrame corresponding to the desired adjacent relation.
+  - a .parquet file in Spark, which is used to store the derived DataFrame corresponding to the desired connectivity relation.
 
 ## Computing topological features
 ### Discrete vertex distortion
