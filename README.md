@@ -6,9 +6,8 @@ Tetrahedral meshes are widely used due to their flexibility and adaptability in 
 We address this problem by proposing a novel framework for efficient and scalable analysis of large tetrahedral meshes using Apache Spark. The proposed framework, called Tetra-Spark, is based on a novel data structure for encoding the minimal information of a tetrahedral mesh, and integrates efficient algorithms for the computation of the morphology. To prove the effectiveness and scalability of such a framework, we conduct a comprehensive comparison against a vanilla Spark implementation for the analysis of tetrahedral meshes.
 
 ## Mesh encoding
-Tetra-Spark encodes two DataFrames, called $DF_V$ and $DF_T$. $DF_V$ stores all the vertices of the tetrahedral mesh $\Sigma$ and each vertex $v$ is characterized by five columnes: the index of $v$, the $x$, $y$, and $z$ coordinates of $v$, and the scalar value $f_v$ of $v$. 
-
-The DataFrame $DF_T$ encodes the tetrahedra of $\Sigma$ by storing the connectivity relation $TV$. Each row is formed by four columns storing the indexes of four extreme vertices of the tetrahedron.
+Tetra-Spark encodes two DataFrames, called $DF_V$ and $DF_T$. 
+![DataFrames to encode a tetrahedral mesh](Tetra_Spark_DataFrames.png)
 
 ## Connectivity relations extraction
 Tetra-Spark supports two strategies for extracting connectivity relations in Tetra-Spark: *global* methods and *local* methods. Global methods work on an entire DataFrame by using native operations provided in Spark. *Local methods* offer a more efficient approach by applying *user-defined functions (UDFs)* to a DataFrame.
