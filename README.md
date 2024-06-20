@@ -7,7 +7,9 @@ We address this problem by proposing a novel framework for efficient and scalabl
 
 ## Mesh encoding
 Tetra-Spark encodes two DataFrames, called $DF_V$ and $DF_T$.
-![DataFrames to encode a tetrahedral mesh](images/Tetra_Spark_DataFrames.png)
+
+<img src="images/Tetra_Spark_DataFrames.png" alt="DataFrames to encode a tetrahedral mesh" width="50%">
+
 
 ## Connectivity relations extraction
 Tetra-Spark supports two strategies for extracting connectivity relations: *global* methods and *local* methods. Global methods work on an entire DataFrame by using native operations provided in Spark. *Local methods* offer a more efficient approach by applying *user-defined functions (UDFs)* to a DataFrame.
