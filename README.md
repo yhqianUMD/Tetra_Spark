@@ -8,7 +8,7 @@ We address this problem by proposing a novel framework for efficient and scalabl
 ## Mesh encoding
 Tetra-Spark encodes two DataFrames, called $DF_V$ and $DF_T$.
 
-<img src="images/Tetra_Spark_DataFrames.png" alt="DataFrames to encode a tetrahedral mesh" width="50%">
+![DataFrames to encode a tetrahedral mesh](images/Tetra_Spark_DataFrames.png)
 
 
 ## Connectivity relations extraction
